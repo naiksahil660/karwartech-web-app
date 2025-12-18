@@ -101,16 +101,23 @@ const ProductDetail = () => {
     );
   }
 
-  // Generate multiple image URLs (since we have placeholder images, we'll create variations)
-  const productImages = product.images && product.images.length > 0
-    ? [
-        product.images[0],
-        product.images[0] + '?variant=2',
-        product.images[0] + '?variant=3',
-        product.images[0] + '?variant=4',
-        product.images[0] + '?variant=5'
-      ]
-    : ['/placeholder-product.png', '/placeholder-product.png', '/placeholder-product.png'];
+  // Combine mainImage with other images for the gallery
+  const productImages = [];
+
+  // Add main image first
+  if (product.mainImage) {
+    productImages.push(product.mainImage);
+  }
+
+  // Add other images
+  if (product.images && product.images.length > 0) {
+    productImages.push(...product.images);
+  }
+
+  // Fallback to placeholder if no images
+  if (productImages.length === 0) {
+    productImages.push('/placeholder-product.png');
+  }
 
   return (
     <div className="product-detail-page">

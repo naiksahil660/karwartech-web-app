@@ -19,6 +19,7 @@ import Appointments from './pages/Appointments';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
 import './styles/GlobalStyles.css';
 
 function App() {
@@ -46,7 +47,7 @@ function App() {
                     <Route path="/services" element={<Services />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    {/* Additional routes will be added here as you create more pages */}
+                    <Route path="/admin" element={<Admin />} />
                   </Routes>
                 </main>
                 <Footer />

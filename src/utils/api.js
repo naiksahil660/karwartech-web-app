@@ -81,4 +81,20 @@ export const appointmentAPI = {
   cancelAppointment: (id) => api.put(`/appointments/${id}/cancel`)
 };
 
+export const adminAPI = {
+  getStats: () => api.get('/admin/stats'),
+  getProducts: () => api.get('/admin/products'),
+  uploadProduct: (formData) => api.post('/admin/products/upload', formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }),
+  updateProduct: (id, formData) => api.put(`/admin/products/${id}`, formData, {
+    headers: {
+      'Content-Type': 'multipart/form-data'
+    }
+  }),
+  deleteProduct: (id) => api.delete(`/admin/products/${id}`)
+};
+
 export default api;

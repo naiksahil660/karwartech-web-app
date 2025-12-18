@@ -47,7 +47,7 @@ const ProductCard = ({ product }) => {
     <div className="product-card" onClick={handleCardClick}>
       <div className="product-image-container">
         <img
-          src={product.images?.[0] || '/placeholder-product.png'}
+          src={product.mainImage || product.images?.[0] || '/placeholder-product.png'}
           alt={product.name}
           className="product-image"
         />
