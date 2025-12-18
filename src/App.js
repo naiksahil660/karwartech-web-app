@@ -13,6 +13,9 @@ import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Wishlist from './pages/Wishlist';
+import Profile from './pages/Profile';
+import Orders from './pages/Orders';
+import Appointments from './pages/Appointments';
 import Services from './pages/Services';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -37,6 +40,9 @@ function App() {
                     <Route path="/search" element={<Products />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/wishlist" element={<Wishlist />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/orders" element={<Orders />} />
+                    <Route path="/appointments" element={<Appointments />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />

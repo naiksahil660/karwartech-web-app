@@ -19,7 +19,7 @@
 .product-image-container {
   position: relative;
   width: 100%;
-  padding-top: 100%;
+  padding-top: 75%;
   overflow: hidden;
   background: linear-gradient(135deg, var(--secondary-light) 0%, rgba(255, 23, 68, 0.03) 100%);
 }
@@ -56,28 +56,36 @@
   position: absolute;
   top: 8px;
   right: 8px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: var(--accent);
-  border: none;
-  width: 32px;
-  height: 32px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #FF1744;
+  border: 1px solid rgba(255, 23, 68, 0.2);
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 1;
-  font-size: 14px;
+  z-index: 2;
+  font-size: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .wishlist-button:hover {
-  background-color: var(--primary);
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #FF1744 0%, #FF6F00 100%);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.4);
 }
 
 .wishlist-button .icon-filled {
-  color: var(--primary);
+  color: #FF1744;
+}
+
+.wishlist-button:hover .icon-filled {
+  color: white;
 }
 
 .out-of-stock-overlay {
@@ -166,8 +174,8 @@
 .add-to-cart-btn {
   margin-top: auto;
   padding: 10px;
-  background-color: var(--primary);
-  color: var(--accent);
+  background: linear-gradient(135deg, #FF1744 0%, #FF5252 100%);
+  color: white;
   border: none;
   border-radius: 8px;
   font-weight: 600;
@@ -178,11 +186,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: 0 2px 8px rgba(255, 23, 68, 0.25);
 }
 
 .add-to-cart-btn:hover:not(:disabled) {
-  background-color: var(--primary-light);
+  background: linear-gradient(135deg, #FF5252 0%, #FF1744 100%);
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 23, 68, 0.4);
 }
 
 .add-to-cart-btn:disabled {
