@@ -1,0 +1,305 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark Theme (Default) - Enhanced Vibrant Colors */
+:root[data-theme="dark"] {
+  --primary: #FF1744;
+  --primary-dark: #D50000;
+  --primary-light: #FF5252;
+  --secondary: #000000;
+  --secondary-light: #1a1a1a;
+  --accent: #FFFFFF;
+  --background: #000000;
+  --background-light: #0a0a0a;
+  --card-bg: #1a1a1a;
+  --text: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --border: #333333;
+  --success: #00E676;
+  --error: #FF1744;
+  --warning: #FFAB00;
+
+  /* Vibrant Accent Colors */
+  --neon-cyan: #00E6FF;
+  --neon-pink: #FF1493;
+  --neon-lime: #32CD32;
+  --neon-purple: #8A2BE2;
+  --neon-gold: #FFD700;
+  --neon-orange: #FF6F00;
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, #FF1744 0%, #FF5252 100%);
+  --gradient-accent: linear-gradient(135deg, #00E6FF 0%, #8A2BE2 50%, #FF1493 100%);
+  --gradient-glow: linear-gradient(135deg, #FF1744 0%, #FF6F00 50%, #FFD700 100%);
+}
+
+/* Light Theme - Enhanced Vibrant Colors */
+:root[data-theme="light"] {
+  --primary: #FF1744;
+  --primary-dark: #D50000;
+  --primary-light: #FF5252;
+  --secondary: #FFFFFF;
+  --secondary-light: #f5f5f5;
+  --accent: #000000;
+  --background: #FFFFFF;
+  --background-light: #fafafa;
+  --card-bg: #FFFFFF;
+  --text: #000000;
+  --text-secondary: #666666;
+  --border: #e0e0e0;
+  --success: #00C853;
+  --error: #FF1744;
+  --warning: #FF6F00;
+
+  /* Vibrant Accent Colors */
+  --neon-cyan: #00B8D4;
+  --neon-pink: #FF1493;
+  --neon-lime: #32CD32;
+  --neon-purple: #7B1FA2;
+  --neon-gold: #FFB300;
+  --neon-orange: #FF6F00;
+
+  /* Gradient Definitions */
+  --gradient-primary: linear-gradient(135deg, #FF1744 0%, #FF5252 100%);
+  --gradient-accent: linear-gradient(135deg, #00B8D4 0%, #7B1FA2 50%, #FF1493 100%);
+  --gradient-glow: linear-gradient(135deg, #FF1744 0%, #FF6F00 50%, #FFB300 100%);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--success);
+  color: var(--success);
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Brand Typography */
+.brand-font {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.gradient-text {
+  background: var(--gradient-glow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-text-accent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.text-glow {
+  text-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+}
+
+.box-glow {
+  box-shadow: 0 0 15px rgba(255, 23, 68, 0.4), 0 0 30px rgba(255, 23, 68, 0.2);
+}
+
+.box-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 230, 255, 0.4), 0 0 30px rgba(0, 230, 255, 0.2);
+}
+
+.box-glow-lime {
+  box-shadow: 0 0 15px rgba(50, 205, 50, 0.4), 0 0 30px rgba(50, 205, 50, 0.2);
+}
+
+/* Vibrant Buttons */
+.btn-vibrant {
+  background: var(--gradient-primary);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 23, 68, 0.3);
+}
+
+.btn-vibrant:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 23, 68, 0.5);
+}
+
+.btn-vibrant-accent {
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.btn-vibrant-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(138, 43, 226, 0.5);
+}
+
+/* Vibrant Cards */
+.card-vibrant {
+  background: var(--card-bg);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card-vibrant:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 30px rgba(255, 23, 68, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Neon Text Colors */
+.text-neon-cyan {
+  color: var(--neon-cyan);
+}
+
+.text-neon-pink {
+  color: var(--neon-pink);
+}
+
+.text-neon-lime {
+  color: var(--neon-lime);
+}
+
+.text-neon-purple {
+  color: var(--neon-purple);
+}
+
+.text-neon-gold {
+  color: var(--neon-gold);
+}
+
+/* Background Gradients */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
+.bg-gradient-glow {
+  background: var(--gradient-glow);
+}

@@ -1,0 +1,50 @@
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.required {
+  color: var(--primary);
+}
+
+.input-field {
+  padding: 12px 16px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: var(--primary);
+  background-color: var(--secondary-light);
+  outline: none;
+}
+
+.input-field:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.input-field::placeholder {
+  color: var(--text-secondary);
+}
+
+.input-error {
+  border-color: var(--error);
+}
+
+.error-text {
+  font-size: 12px;
+  color: var(--error);
+}

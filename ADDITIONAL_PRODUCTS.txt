@@ -1,0 +1,1015 @@
+// Additional Products to Add to MongoDB
+// Copy and paste these commands in MongoDB Compass or MongoDB Shell
+
+// ==========================================
+// NEW PHONES (Additional 5 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "Vivo X90 Pro",
+    description: "Premium flagship phone with Zeiss optics and powerful performance",
+    price: 59999,
+    originalPrice: 69999,
+    category: "new-phone",
+    brand: "Vivo",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500"],
+    specifications: {
+      "Display": "6.78\" AMOLED",
+      "Processor": "MediaTek Dimensity 9200",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 50MP + 12MP",
+      "Battery": "4870mAh",
+      "OS": "Android 13"
+    },
+    stock: 20,
+    featured: true,
+    discount: 14,
+    rating: 4.7,
+    reviewCount: 189
+  },
+  {
+    name: "Realme GT 3",
+    description: "Gaming phone with 240W fast charging and flagship performance",
+    price: 42999,
+    originalPrice: 49999,
+    category: "new-phone",
+    brand: "Realme",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"],
+    specifications: {
+      "Display": "6.74\" AMOLED 144Hz",
+      "Processor": "Snapdragon 8+ Gen 1",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 8MP + 2MP",
+      "Battery": "4600mAh",
+      "OS": "Android 13"
+    },
+    stock: 18,
+    featured: false,
+    discount: 14,
+    rating: 4.5,
+    reviewCount: 156
+  },
+  {
+    name: "Nothing Phone 2",
+    description: "Unique design with Glyph interface and pure Android experience",
+    price: 44999,
+    originalPrice: 49999,
+    category: "new-phone",
+    brand: "Nothing",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500"],
+    specifications: {
+      "Display": "6.7\" LTPO AMOLED",
+      "Processor": "Snapdragon 8+ Gen 1",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 50MP",
+      "Battery": "4700mAh",
+      "OS": "Android 13"
+    },
+    stock: 15,
+    featured: true,
+    discount: 10,
+    rating: 4.6,
+    reviewCount: 203
+  },
+  {
+    name: "IQOO 11 5G",
+    description: "Performance-focused phone with BMW Motorsport design",
+    price: 54999,
+    originalPrice: 59999,
+    category: "new-phone",
+    brand: "IQOO",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1592286927505-2fd7c3f20d50?w=500"],
+    specifications: {
+      "Display": "6.78\" AMOLED 144Hz",
+      "Processor": "Snapdragon 8 Gen 2",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 13MP + 8MP",
+      "Battery": "5000mAh",
+      "OS": "Android 13"
+    },
+    stock: 22,
+    featured: false,
+    discount: 8,
+    rating: 4.6,
+    reviewCount: 178
+  },
+  {
+    name: "Motorola Edge 40 Pro",
+    description: "Clean Android experience with flagship features",
+    price: 49999,
+    originalPrice: 54999,
+    category: "new-phone",
+    brand: "Motorola",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500"],
+    specifications: {
+      "Display": "6.67\" OLED 165Hz",
+      "Processor": "Snapdragon 8 Gen 2",
+      "RAM": "12GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 50MP + 12MP",
+      "Battery": "4600mAh",
+      "OS": "Android 13"
+    },
+    stock: 16,
+    featured: false,
+    discount: 9,
+    rating: 4.5,
+    reviewCount: 142
+  }
+]);
+
+// ==========================================
+// USED PHONES (Additional 5 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "iPhone 11 Pro",
+    description: "Used iPhone 11 Pro in excellent condition with triple cameras",
+    price: 39999,
+    originalPrice: 52999,
+    category: "used-phone",
+    brand: "Apple",
+    condition: "like-new",
+    images: ["https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500"],
+    specifications: {
+      "Display": "5.8\" Super Retina XDR",
+      "Processor": "A13 Bionic",
+      "RAM": "4GB",
+      "Storage": "64GB",
+      "Camera": "12MP Triple",
+      "Battery": "3046mAh",
+      "OS": "iOS 17"
+    },
+    stock: 5,
+    featured: false,
+    discount: 25,
+    rating: 4.6,
+    reviewCount: 89
+  },
+  {
+    name: "OnePlus 10 Pro",
+    description: "Used flagship with Hasselblad cameras, good condition",
+    price: 35999,
+    originalPrice: 46999,
+    category: "used-phone",
+    brand: "OnePlus",
+    condition: "good",
+    images: ["https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=500"],
+    specifications: {
+      "Display": "6.7\" AMOLED 120Hz",
+      "Processor": "Snapdragon 8 Gen 1",
+      "RAM": "8GB",
+      "Storage": "128GB",
+      "Camera": "48MP + 50MP + 8MP",
+      "Battery": "5000mAh",
+      "OS": "Android 13"
+    },
+    stock: 7,
+    featured: false,
+    discount: 23,
+    rating: 4.4,
+    reviewCount: 67
+  },
+  {
+    name: "Samsung S21 FE",
+    description: "Used Samsung S21 Fan Edition in excellent condition",
+    price: 32999,
+    originalPrice: 44999,
+    category: "used-phone",
+    brand: "Samsung",
+    condition: "like-new",
+    images: ["https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500"],
+    specifications: {
+      "Display": "6.4\" AMOLED 120Hz",
+      "Processor": "Snapdragon 888",
+      "RAM": "8GB",
+      "Storage": "128GB",
+      "Camera": "12MP + 12MP + 8MP",
+      "Battery": "4500mAh",
+      "OS": "Android 13"
+    },
+    stock: 6,
+    featured: false,
+    discount: 27,
+    rating: 4.5,
+    reviewCount: 78
+  },
+  {
+    name: "Google Pixel 6",
+    description: "Used Pixel with Google Tensor chip and excellent cameras",
+    price: 28999,
+    originalPrice: 39999,
+    category: "used-phone",
+    brand: "Google",
+    condition: "good",
+    images: ["https://images.unsplash.com/photo-1598965675045-1974682f2b92?w=500"],
+    specifications: {
+      "Display": "6.4\" AMOLED 90Hz",
+      "Processor": "Google Tensor",
+      "RAM": "8GB",
+      "Storage": "128GB",
+      "Camera": "50MP + 12MP",
+      "Battery": "4614mAh",
+      "OS": "Android 14"
+    },
+    stock: 4,
+    featured: false,
+    discount: 28,
+    rating: 4.7,
+    reviewCount: 92
+  },
+  {
+    name: "Xiaomi 12 Pro",
+    description: "Used flagship with 120W fast charging, good condition",
+    price: 33999,
+    originalPrice: 44999,
+    category: "used-phone",
+    brand: "Xiaomi",
+    condition: "good",
+    images: ["https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=500"],
+    specifications: {
+      "Display": "6.73\" AMOLED 120Hz",
+      "Processor": "Snapdragon 8 Gen 1",
+      "RAM": "8GB",
+      "Storage": "256GB",
+      "Camera": "50MP + 50MP + 50MP",
+      "Battery": "4600mAh",
+      "OS": "Android 12"
+    },
+    stock: 5,
+    featured: false,
+    discount: 24,
+    rating: 4.4,
+    reviewCount: 71
+  }
+]);
+
+// ==========================================
+// MOBILE ACCESSORIES (Additional 15 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "Anker PowerCore 20000mAh",
+    description: "High-capacity power bank with fast charging support",
+    price: 3499,
+    originalPrice: 4499,
+    category: "mobile-accessories",
+    brand: "Anker",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500"],
+    specifications: {
+      "Capacity": "20000mAh",
+      "Output": "18W Fast Charging",
+      "Ports": "2 USB-A + 1 USB-C",
+      "Weight": "354g"
+    },
+    stock: 45,
+    featured: true,
+    discount: 22,
+    rating: 4.8,
+    reviewCount: 234
+  },
+  {
+    name: "Spigen Tough Armor Case",
+    description: "Military-grade protection case for various phone models",
+    price: 1299,
+    originalPrice: 1799,
+    category: "mobile-accessories",
+    brand: "Spigen",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500"],
+    specifications: {
+      "Material": "TPU + Polycarbonate",
+      "Protection": "Military Grade MIL-STD 810G-516.6",
+      "Features": "Air Cushion Technology"
+    },
+    stock: 120,
+    featured: false,
+    discount: 28,
+    rating: 4.7,
+    reviewCount: 456
+  },
+  {
+    name: "OnePlus Warp Charge 65W",
+    description: "Super fast 65W charger with USB-C cable",
+    price: 1999,
+    originalPrice: 2999,
+    category: "mobile-accessories",
+    brand: "OnePlus",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500"],
+    specifications: {
+      "Power": "65W",
+      "Cable Length": "1.5m",
+      "Type": "USB-C",
+      "Features": "Fast Charging"
+    },
+    stock: 67,
+    featured: false,
+    discount: 33,
+    rating: 4.9,
+    reviewCount: 189
+  },
+  {
+    name: "Belkin Screen Protector",
+    description: "Tempered glass screen protector with installation kit",
+    price: 799,
+    originalPrice: 1199,
+    category: "mobile-accessories",
+    brand: "Belkin",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500"],
+    specifications: {
+      "Material": "Tempered Glass",
+      "Hardness": "9H",
+      "Thickness": "0.33mm",
+      "Features": "Anti-fingerprint coating"
+    },
+    stock: 200,
+    featured: false,
+    discount: 33,
+    rating: 4.6,
+    reviewCount: 678
+  },
+  {
+    name: "Baseus Car Phone Holder",
+    description: "360° rotation magnetic car mount for dashboard",
+    price: 899,
+    originalPrice: 1499,
+    category: "mobile-accessories",
+    brand: "Baseus",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500"],
+    specifications: {
+      "Type": "Magnetic Mount",
+      "Rotation": "360°",
+      "Compatibility": "All smartphones",
+      "Installation": "Dashboard/Windshield"
+    },
+    stock: 85,
+    featured: false,
+    discount: 40,
+    rating: 4.5,
+    reviewCount: 312
+  },
+  {
+    name: "boAt Rockerz 450 Bluetooth Headphones",
+    description: "Wireless on-ear headphones with 15-hour battery life",
+    price: 1499,
+    originalPrice: 2999,
+    category: "mobile-accessories",
+    brand: "boAt",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1545127398-14699f92334b?w=500"],
+    specifications: {
+      "Type": "On-Ear Wireless",
+      "Battery": "15 hours",
+      "Bluetooth": "5.0",
+      "Driver": "40mm"
+    },
+    stock: 95,
+    featured: true,
+    discount: 50,
+    rating: 4.3,
+    reviewCount: 1245
+  },
+  {
+    name: "SanDisk Ultra 128GB microSD",
+    description: "High-speed microSD card with adapter",
+    price: 999,
+    originalPrice: 1499,
+    category: "mobile-accessories",
+    brand: "SanDisk",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1626814506634-bbf58f48627e?w=500"],
+    specifications: {
+      "Capacity": "128GB",
+      "Speed": "100MB/s read",
+      "Class": "U1, Class 10",
+      "Includes": "SD Adapter"
+    },
+    stock: 150,
+    featured: false,
+    discount: 33,
+    rating: 4.8,
+    reviewCount: 892
+  },
+  {
+    name: "Portronics Muffs G Wireless Earbuds",
+    description: "True wireless earbuds with gaming mode",
+    price: 999,
+    originalPrice: 1999,
+    category: "mobile-accessories",
+    brand: "Portronics",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500"],
+    specifications: {
+      "Type": "TWS Earbuds",
+      "Battery": "20 hours total",
+      "Bluetooth": "5.0",
+      "Features": "Gaming Mode, IPX4"
+    },
+    stock: 110,
+    featured: false,
+    discount: 50,
+    rating: 4.2,
+    reviewCount: 567
+  },
+  {
+    name: "Mi 3-in-1 USB Cable",
+    description: "Multi-connector cable with Lightning, Type-C, and Micro USB",
+    price: 399,
+    originalPrice: 699,
+    category: "mobile-accessories",
+    brand: "Mi",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1591290619762-d05b7e2f9f93?w=500"],
+    specifications: {
+      "Length": "1.2m",
+      "Connectors": "Lightning, Type-C, Micro USB",
+      "Current": "2.4A Max",
+      "Material": "Braided Nylon"
+    },
+    stock: 180,
+    featured: false,
+    discount: 43,
+    rating: 4.5,
+    reviewCount: 423
+  },
+  {
+    name: "Ambrane 10000mAh Slim Power Bank",
+    description: "Compact power bank with dual output ports",
+    price: 799,
+    originalPrice: 1299,
+    category: "mobile-accessories",
+    brand: "Ambrane",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500"],
+    specifications: {
+      "Capacity": "10000mAh",
+      "Output": "10W",
+      "Ports": "2 USB-A",
+      "Weight": "218g"
+    },
+    stock: 140,
+    featured: false,
+    discount: 38,
+    rating: 4.4,
+    reviewCount: 678
+  },
+  {
+    name: "PopSocket Phone Grip",
+    description: "Collapsible grip and stand for smartphones",
+    price: 299,
+    originalPrice: 499,
+    category: "mobile-accessories",
+    brand: "PopSocket",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500"],
+    specifications: {
+      "Material": "Plastic + Adhesive",
+      "Height": "Extended 1.5cm",
+      "Features": "360° rotation",
+      "Reusable": "Yes"
+    },
+    stock: 250,
+    featured: false,
+    discount: 40,
+    rating: 4.6,
+    reviewCount: 1234
+  },
+  {
+    name: "Xiaomi Mi Band 7",
+    description: "Fitness tracker with AMOLED display and 14-day battery",
+    price: 2799,
+    originalPrice: 3499,
+    category: "mobile-accessories",
+    brand: "Xiaomi",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1557438159-51eec7a6c9e8?w=500"],
+    specifications: {
+      "Display": "1.62\" AMOLED",
+      "Battery": "14 days",
+      "Features": "110+ sports modes, SpO2, Heart rate",
+      "Water Resistance": "5ATM"
+    },
+    stock: 75,
+    featured: true,
+    discount: 20,
+    rating: 4.7,
+    reviewCount: 1567
+  },
+  {
+    name: "Ringke Fusion X Case",
+    description: "Clear rugged case with military-grade protection",
+    price: 999,
+    originalPrice: 1499,
+    category: "mobile-accessories",
+    brand: "Ringke",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=500"],
+    specifications: {
+      "Material": "TPU + PC",
+      "Protection": "Military Grade",
+      "Design": "Clear Back",
+      "Features": "Raised bezels"
+    },
+    stock: 160,
+    featured: false,
+    discount: 33,
+    rating: 4.6,
+    reviewCount: 345
+  },
+  {
+    name: "Syska Type-C Fast Charger",
+    description: "18W fast charger with Type-C cable",
+    price: 599,
+    originalPrice: 999,
+    category: "mobile-accessories",
+    brand: "Syska",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500"],
+    specifications: {
+      "Power": "18W",
+      "Cable Length": "1m",
+      "Type": "USB-C",
+      "Features": "Fast Charging, Surge Protection"
+    },
+    stock: 190,
+    featured: false,
+    discount: 40,
+    rating: 4.4,
+    reviewCount: 456
+  },
+  {
+    name: "Noise ColorFit Pro 4 Smartwatch",
+    description: "Feature-rich smartwatch with Bluetooth calling",
+    price: 3499,
+    originalPrice: 5999,
+    category: "mobile-accessories",
+    brand: "Noise",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"],
+    specifications: {
+      "Display": "1.72\" HD Display",
+      "Battery": "7 days",
+      "Features": "Bluetooth calling, 100+ sports modes",
+      "Water Resistance": "IP68"
+    },
+    stock: 60,
+    featured: true,
+    discount: 42,
+    rating: 4.5,
+    reviewCount: 2134
+  }
+]);
+
+// ==========================================
+// LAPTOP ACCESSORIES (Additional 10 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "Dell USB-C Docking Station",
+    description: "Universal USB-C dock with multiple ports",
+    price: 8999,
+    originalPrice: 12999,
+    category: "laptop-accessories",
+    brand: "Dell",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500"],
+    specifications: {
+      "Ports": "HDMI, DisplayPort, USB-A, USB-C, Ethernet",
+      "Power Delivery": "90W",
+      "Display Support": "Dual 4K",
+      "Compatibility": "USB-C laptops"
+    },
+    stock: 35,
+    featured: true,
+    discount: 31,
+    rating: 4.7,
+    reviewCount: 234
+  },
+  {
+    name: "HP Wireless Mouse and Keyboard Combo",
+    description: "Slim wireless keyboard and mouse set",
+    price: 1999,
+    originalPrice: 2999,
+    category: "laptop-accessories",
+    brand: "HP",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500"],
+    specifications: {
+      "Type": "Wireless Combo",
+      "Connection": "2.4GHz USB Receiver",
+      "Battery": "AAA (12 months)",
+      "Compatibility": "Windows, Mac, Chrome OS"
+    },
+    stock: 85,
+    featured: false,
+    discount: 33,
+    rating: 4.5,
+    reviewCount: 567
+  },
+  {
+    name: "Targus Laptop Cooling Pad",
+    description: "Dual-fan cooling pad for laptops up to 17 inches",
+    price: 1299,
+    originalPrice: 1999,
+    category: "laptop-accessories",
+    brand: "Targus",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500"],
+    specifications: {
+      "Size": "Up to 17 inches",
+      "Fans": "2 x 120mm",
+      "USB Powered": "Yes",
+      "Features": "Adjustable height"
+    },
+    stock: 67,
+    featured: false,
+    discount: 35,
+    rating: 4.4,
+    reviewCount: 345
+  },
+  {
+    name: "Lenovo Legion Gaming Mouse",
+    description: "RGB gaming mouse with programmable buttons",
+    price: 2499,
+    originalPrice: 3999,
+    category: "laptop-accessories",
+    brand: "Lenovo",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1527814050087-3793815479db?w=500"],
+    specifications: {
+      "DPI": "Up to 16000",
+      "Buttons": "8 programmable",
+      "RGB": "16.8M colors",
+      "Connection": "Wired USB"
+    },
+    stock: 55,
+    featured: false,
+    discount: 38,
+    rating: 4.6,
+    reviewCount: 289
+  },
+  {
+    name: "Samsung T7 Portable SSD 1TB",
+    description: "Ultra-fast portable SSD with USB 3.2",
+    price: 8999,
+    originalPrice: 11999,
+    category: "laptop-accessories",
+    brand: "Samsung",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500"],
+    specifications: {
+      "Capacity": "1TB",
+      "Speed": "1050MB/s read, 1000MB/s write",
+      "Interface": "USB 3.2 Gen 2",
+      "Features": "Password protection, AES encryption"
+    },
+    stock: 42,
+    featured: true,
+    discount: 25,
+    rating: 4.9,
+    reviewCount: 678
+  },
+  {
+    name: "Portronics Laptop Stand",
+    description: "Adjustable aluminum laptop stand with ergonomic design",
+    price: 1499,
+    originalPrice: 2499,
+    category: "laptop-accessories",
+    brand: "Portronics",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500"],
+    specifications: {
+      "Material": "Aluminum Alloy",
+      "Compatibility": "10-17 inch laptops",
+      "Height Adjustment": "6 levels",
+      "Features": "Non-slip pads, cable management"
+    },
+    stock: 78,
+    featured: false,
+    discount: 40,
+    rating: 4.5,
+    reviewCount: 456
+  },
+  {
+    name: "Belkin Surge Protector",
+    description: "6-outlet surge protector with USB charging ports",
+    price: 1799,
+    originalPrice: 2799,
+    category: "laptop-accessories",
+    brand: "Belkin",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"],
+    specifications: {
+      "Outlets": "6 AC outlets",
+      "USB Ports": "2 USB-A (2.4A each)",
+      "Surge Protection": "900 Joules",
+      "Cable Length": "2m"
+    },
+    stock: 120,
+    featured: false,
+    discount: 36,
+    rating: 4.7,
+    reviewCount: 789
+  },
+  {
+    name: "Razer Kraken X Gaming Headset",
+    description: "Lightweight gaming headset with 7.1 surround sound",
+    price: 3499,
+    originalPrice: 4999,
+    category: "laptop-accessories",
+    brand: "Razer",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1545127398-14699f92334b?w=500"],
+    specifications: {
+      "Audio": "7.1 Surround Sound",
+      "Microphone": "Flexible cardioid",
+      "Weight": "250g",
+      "Connection": "3.5mm jack"
+    },
+    stock: 48,
+    featured: false,
+    discount: 30,
+    rating: 4.6,
+    reviewCount: 534
+  },
+  {
+    name: "Ant Esports 1080p Webcam",
+    description: "Full HD webcam with autofocus and built-in mic",
+    price: 2299,
+    originalPrice: 3499,
+    category: "laptop-accessories",
+    brand: "Ant Esports",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500"],
+    specifications: {
+      "Resolution": "1080p @ 30fps",
+      "Focus": "Auto-focus",
+      "Microphone": "Built-in stereo",
+      "Connection": "USB 2.0"
+    },
+    stock: 65,
+    featured: false,
+    discount: 34,
+    rating: 4.3,
+    reviewCount: 234
+  },
+  {
+    name: "TP-Link 300Mbps USB WiFi Adapter",
+    description: "High-speed wireless adapter for laptops and PCs",
+    price: 499,
+    originalPrice: 799,
+    category: "laptop-accessories",
+    brand: "TP-Link",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=500"],
+    specifications: {
+      "Speed": "300Mbps",
+      "Standard": "802.11n",
+      "Interface": "USB 2.0",
+      "Compatibility": "Windows, Mac, Linux"
+    },
+    stock: 150,
+    featured: false,
+    discount: 38,
+    rating: 4.5,
+    reviewCount: 1234
+  }
+]);
+
+// ==========================================
+// NEW LAPTOPS (Additional 3 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "Acer Predator Helios 300",
+    description: "Gaming laptop with RTX 4060 and 165Hz display",
+    price: 119999,
+    originalPrice: 139999,
+    category: "new-laptop",
+    brand: "Acer",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500"],
+    specifications: {
+      "Display": "15.6\" FHD 165Hz",
+      "Processor": "Intel Core i7-13700HX",
+      "RAM": "16GB DDR5",
+      "Storage": "512GB SSD",
+      "Graphics": "NVIDIA RTX 4060 6GB",
+      "OS": "Windows 11"
+    },
+    stock: 8,
+    featured: true,
+    discount: 14,
+    rating: 4.7,
+    reviewCount: 156
+  },
+  {
+    name: "Microsoft Surface Laptop 5",
+    description: "Premium ultrabook with PixelSense touchscreen",
+    price: 109999,
+    originalPrice: 129999,
+    category: "new-laptop",
+    brand: "Microsoft",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500"],
+    specifications: {
+      "Display": "13.5\" PixelSense Touchscreen",
+      "Processor": "Intel Core i7-1255U",
+      "RAM": "16GB LPDDR5",
+      "Storage": "512GB SSD",
+      "Graphics": "Intel Iris Xe",
+      "OS": "Windows 11"
+    },
+    stock: 10,
+    featured: true,
+    discount: 15,
+    rating: 4.8,
+    reviewCount: 189
+  },
+  {
+    name: "MSI Creator Z16",
+    description: "Content creation laptop with 4K+ display and RTX 4070",
+    price: 199999,
+    originalPrice: 229999,
+    category: "new-laptop",
+    brand: "MSI",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500"],
+    specifications: {
+      "Display": "16\" 4K+ (3840x2400) 120Hz",
+      "Processor": "Intel Core i9-13900H",
+      "RAM": "32GB DDR5",
+      "Storage": "1TB SSD",
+      "Graphics": "NVIDIA RTX 4070 8GB",
+      "OS": "Windows 11 Pro"
+    },
+    stock: 5,
+    featured: true,
+    discount: 13,
+    rating: 4.9,
+    reviewCount: 123
+  }
+]);
+
+// ==========================================
+// USED LAPTOPS (Additional 2 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "HP Pavilion Gaming 15",
+    description: "Used gaming laptop in good condition with GTX 1650",
+    price: 45999,
+    originalPrice: 62999,
+    category: "used-laptop",
+    brand: "HP",
+    condition: "good",
+    images: ["https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500"],
+    specifications: {
+      "Display": "15.6\" FHD 144Hz",
+      "Processor": "Intel Core i5-10300H",
+      "RAM": "8GB DDR4",
+      "Storage": "512GB SSD",
+      "Graphics": "NVIDIA GTX 1650 4GB",
+      "OS": "Windows 11"
+    },
+    stock: 4,
+    featured: false,
+    discount: 27,
+    rating: 4.3,
+    reviewCount: 78
+  },
+  {
+    name: "Lenovo IdeaPad Slim 3",
+    description: "Used everyday laptop in like-new condition",
+    price: 28999,
+    originalPrice: 39999,
+    category: "used-laptop",
+    brand: "Lenovo",
+    condition: "like-new",
+    images: ["https://images.unsplash.com/photo-1504707748692-419802cf939d?w=500"],
+    specifications: {
+      "Display": "14\" FHD",
+      "Processor": "Intel Core i3-11th Gen",
+      "RAM": "8GB DDR4",
+      "Storage": "256GB SSD",
+      "Graphics": "Intel UHD",
+      "OS": "Windows 11"
+    },
+    stock: 6,
+    featured: false,
+    discount: 28,
+    rating: 4.4,
+    reviewCount: 92
+  }
+]);
+
+// ==========================================
+// DESKTOPS (Additional 1 product)
+// ==========================================
+
+db.products.insertOne({
+  name: "Dell OptiPlex 7010 Tower",
+  description: "Business desktop PC with Intel Core i7 and Windows 11 Pro",
+  price: 54999,
+  originalPrice: 69999,
+  category: "desktop",
+  brand: "Dell",
+  condition: "new",
+  images: ["https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=500"],
+  specifications: {
+    "Processor": "Intel Core i7-13700",
+    "RAM": "16GB DDR4",
+    "Storage": "512GB SSD + 1TB HDD",
+    "Graphics": "Intel UHD 770",
+    "OS": "Windows 11 Pro",
+    "Ports": "Multiple USB, HDMI, DisplayPort"
+  },
+  stock: 8,
+  featured: false,
+  discount: 21,
+  rating: 4.6,
+  reviewCount: 134
+});
+
+// ==========================================
+// SPEAKERS (Additional 2 products)
+// ==========================================
+
+db.products.insertMany([
+  {
+    name: "Bose SoundLink Revolve",
+    description: "360° portable Bluetooth speaker with deep bass",
+    price: 18999,
+    originalPrice: 24999,
+    category: "speaker",
+    brand: "Bose",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500"],
+    specifications: {
+      "Type": "Portable Bluetooth",
+      "Battery": "12 hours",
+      "Water Resistance": "IPX4",
+      "Connectivity": "Bluetooth, Aux",
+      "Features": "360° sound, Voice assistant"
+    },
+    stock: 22,
+    featured: true,
+    discount: 24,
+    rating: 4.8,
+    reviewCount: 567
+  },
+  {
+    name: "Creative Pebble Plus 2.1",
+    description: "Desktop speakers with down-firing subwoofer",
+    price: 3999,
+    originalPrice: 5999,
+    category: "speaker",
+    brand: "Creative",
+    condition: "new",
+    images: ["https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500"],
+    specifications: {
+      "Type": "2.1 Desktop Speakers",
+      "Power": "8W RMS",
+      "Connectivity": "USB, Aux",
+      "Features": "Down-firing subwoofer, Gain control"
+    },
+    stock: 45,
+    featured: false,
+    discount: 33,
+    rating: 4.5,
+    reviewCount: 789
+  }
+]);
+
+// Total products added: 51 new products
+// Categories breakdown:
+// - New Phones: 5
+// - Used Phones: 5
+// - Mobile Accessories: 15
+// - Laptop Accessories: 10
+// - New Laptops: 3
+// - Used Laptops: 2
+// - Desktops: 1
+// - Speakers: 2
+
+console.log("✅ Successfully added 51 additional products to the database!");
+console.log("Total products in database should now be: 81 products");
