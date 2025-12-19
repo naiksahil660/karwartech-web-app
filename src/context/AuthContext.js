@@ -44,7 +44,18 @@ export const AuthProvider = ({ children }) => {
 
       return { success: true };
     } catch (err) {
-      const errorMessage = err.response?.data?.message || 'Login failed';
+      let errorMessage = 'Login failed. Please try again.';
+
+      if (err.response?.data?.message) {
+        errorMessage = err.response.data.message;
+      } else if (err.response?.status === 401) {
+        errorMessage = 'Invalid email or password';
+      } else if (err.response?.status === 404) {
+        errorMessage = 'User not found';
+      } else if (!err.response) {
+        errorMessage = 'Network error. Please check your connection.';
+      }
+
       setError(errorMessage);
       return { success: false, error: errorMessage };
     }

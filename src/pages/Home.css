@@ -199,6 +199,8 @@
     linear-gradient(90deg, transparent 0%, rgba(138, 43, 226, 0.04) 50%, transparent 100%),
     linear-gradient(0deg, transparent 0%, rgba(255, 20, 147, 0.03) 50%, transparent 100%);
   overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Floating Orb 3 - Purple/Violet Center */
@@ -308,7 +310,7 @@
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   text-align: center;
   max-width: 800px;
   padding: 32px;
@@ -352,6 +354,14 @@
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-buttons a,
+.hero-buttons button {
+  position: relative;
+  z-index: 10;
 }
 
 /* Offers Slider */
@@ -584,7 +594,22 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 350px;
+    height: auto;
+    min-height: 400px;
+    padding: 40px 0;
+  }
+
+  .hero-slide {
+    position: relative;
+    transform: none;
+    opacity: 0;
+    display: none;
+  }
+
+  .hero-slide.active {
+    display: flex;
+    opacity: 1;
+    transform: none;
   }
 
   .hero-slide-brand .hero-content,
@@ -597,22 +622,87 @@
     display: none;
   }
 
+  .hero-content {
+    padding: 20px 16px;
+    max-width: 100%;
+  }
+
   .hero-brand {
     font-size: 12px;
     padding: 6px 16px;
   }
 
   .hero-title {
-    font-size: 32px;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-title::after {
+    width: 60px;
+    height: 3px;
+    margin: 12px auto;
   }
 
   .hero-subtitle {
-    font-size: 16px;
+    font-size: 14px;
+    margin-bottom: 24px;
+    padding: 0 10px;
   }
 
   .hero-buttons {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    gap: 12px;
+    padding: 0 20px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  .hero-dots {
+    bottom: 15px;
+  }
+
+  .hero-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .hero-dot.active {
+    width: 24px;
+  }
+
+  /* Reduce orb sizes on mobile */
+  .hero-section::before {
+    width: 250px;
+    height: 250px;
+    top: -5%;
+    left: -10%;
+  }
+
+  .hero-section::after {
+    width: 200px;
+    height: 200px;
+    bottom: -5%;
+    right: -10%;
+  }
+
+  .hero-overlay::before {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-overlay::after {
+    width: 180px;
+    height: 180px;
+    top: 5%;
+    right: 5%;
   }
 
   .offers-slider {
@@ -681,5 +771,89 @@
 
   .banner-content p {
     font-size: 16px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 350px;
+    padding: 30px 0;
+  }
+
+  .hero-content {
+    padding: 16px 12px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+    padding: 0 16px;
+  }
+
+  .hero-buttons a {
+    max-width: 220px;
+  }
+
+  .slider-container {
+    height: 140px;
+  }
+
+  .slide {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .slide-icon {
+    font-size: 32px;
+  }
+
+  .slide-title {
+    font-size: 16px;
+  }
+
+  .slide-description {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-card {
+    padding: 20px 12px;
+  }
+
+  .category-icon {
+    font-size: 32px;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
+
+  .products-grid {
+    gap: 12px;
+  }
+
+  .banner-content h2 {
+    font-size: 24px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
   }
 }

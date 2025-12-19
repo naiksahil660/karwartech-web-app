@@ -281,7 +281,8 @@
 @media (max-width: 768px) {
   .navbar-container {
     flex-wrap: wrap;
-    padding: 12px 16px;
+    padding: 16px;
+    min-height: 70px;
   }
 
   .navbar-search {
@@ -289,18 +290,23 @@
   }
 
   .navbar-icons {
-    gap: 8px;
+    gap: 12px;
   }
 
   .icon-button {
-    padding: 6px;
-    font-size: 16px;
+    padding: 8px;
+    font-size: 18px;
   }
 
   .mobile-menu-icon {
     display: block;
-    padding: 8px;
+    padding: 10px;
     margin-left: 8px;
+    font-size: 24px;
+  }
+
+  .logo-image {
+    height: 36px;
   }
 
   /* Account dropdown fix for mobile */
@@ -330,7 +336,7 @@
 
   .navbar-menu {
     position: fixed;
-    top: 65px;
+    top: 70px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -393,7 +399,8 @@
 /* Extra small screens */
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 10px 12px;
+    padding: 12px;
+    min-height: 60px;
   }
 
   .logo-image {
@@ -401,23 +408,23 @@
   }
 
   .navbar-icons {
-    gap: 4px;
+    gap: 8px;
   }
 
   .icon-button {
-    padding: 4px;
-    font-size: 14px;
+    padding: 6px;
+    font-size: 16px;
   }
 
   .badge {
-    font-size: 8px;
-    padding: 1px 4px;
-    min-width: 14px;
+    font-size: 9px;
+    padding: 2px 5px;
+    min-width: 16px;
   }
 
   .mobile-menu-icon {
-    font-size: 20px;
-    padding: 6px;
+    font-size: 22px;
+    padding: 8px;
     margin-left: 4px;
   }
 
@@ -436,7 +443,7 @@
   }
 
   .navbar-menu {
-    top: 55px;
+    top: 60px;
     padding: 12px;
   }
 

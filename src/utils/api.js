@@ -26,11 +26,20 @@ api.interceptors.request.use(
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response?.status === 401) {
+    // Don't redirect on 401 if already on login/register page
+    const isAuthPage = window.location.pathname === '/login' || window.location.pathname === '/register';
+
+    if (error.response?.status === 401 && !isAuthPage) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
       window.location.href = '/login';
     }
+
+    // Handle network errors
+    if (!error.response) {
+      error.message = 'Network error. Please check your connection.';
+    }
+
     return Promise.reject(error);
   }
 );
