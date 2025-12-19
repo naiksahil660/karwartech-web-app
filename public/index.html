@@ -3,41 +3,243 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#FF1744" />
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <!-- Primary Meta Tags -->
+    <title>Karwar Tech - Best Mobile & Laptop Shop in Karwar | Phones, Laptops & Repair Services</title>
+    <meta name="title" content="Karwar Tech - Best Mobile & Laptop Shop in Karwar | Phones, Laptops & Repair Services" />
+    <meta name="description" content="Karwar Tech is your trusted destination for new & used mobiles, laptops, desktops, and accessories in Karwar. Expert repair services with genuine parts. Best prices guaranteed!" />
+    <meta name="keywords" content="Karwar Tech, mobile shop Karwar, laptop shop Karwar, phone repair Karwar, laptop repair Karwar, buy mobile Karwar, buy laptop Karwar, Samsung phones Karwar, iPhone Karwar, used phones Karwar, used laptops Karwar, mobile accessories Karwar, laptop accessories Karwar, computer shop Karwar, electronics shop Karwar, best mobile shop Karnataka, phone service center Karwar" />
+    <meta name="author" content="Karwar Tech" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <link rel="canonical" href="https://karwartech.online" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://karwartech.online/" />
+    <meta property="og:title" content="Karwar Tech - Best Mobile & Laptop Shop in Karwar" />
+    <meta property="og:description" content="Your trusted destination for new & used mobiles, laptops, and expert repair services in Karwar. Best prices guaranteed!" />
+    <meta property="og:image" content="https://karwartech.online/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Karwar Tech - Mobile and Laptop Shop" />
+    <meta property="og:site_name" content="Karwar Tech" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://karwartech.online/" />
+    <meta name="twitter:title" content="Karwar Tech - Best Mobile & Laptop Shop in Karwar" />
+    <meta name="twitter:description" content="Your trusted destination for new & used mobiles, laptops, and expert repair services in Karwar. Best prices guaranteed!" />
+    <meta name="twitter:image" content="https://karwartech.online/og-image.jpg" />
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="geo.region" content="IN-KA" />
+    <meta name="geo.placename" content="Karwar" />
+    <meta name="geo.position" content="14.8127;74.1299" />
+    <meta name="ICBM" content="14.8127, 74.1299" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="language" content="English" />
+    <meta http-equiv="content-language" content="en-IN" />
+
+    <!-- Mobile App Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Karwar Tech" />
+    <meta name="application-name" content="Karwar Tech" />
+    <meta name="msapplication-TileColor" content="#FF1744" />
+    <meta name="msapplication-config" content="%PUBLIC_URL%/browserconfig.xml" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="%PUBLIC_URL%/logo192.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Karwar Tech",
+      "alternateName": "KarwarTech",
+      "url": "https://karwartech.online",
+      "logo": "https://karwartech.online/karwar tech logo (1).png",
+      "description": "Best mobile and laptop shop in Karwar offering new & used phones, laptops, accessories and expert repair services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road",
+        "addressLocality": "Karwar",
+        "addressRegion": "Karnataka",
+        "postalCode": "581301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "14.8127",
+        "longitude": "74.1299"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Hindi", "Kannada"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/karwartech",
+        "https://www.instagram.com/karwartech",
+        "https://twitter.com/karwartech"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://karwartech.online",
+      "name": "Karwar Tech",
+      "image": "https://karwartech.online/karwar tech logo (1).png",
+      "description": "Leading mobile and laptop shop in Karwar. Buy new & used smartphones, laptops, desktops, and accessories. Expert repair services available.",
+      "url": "https://karwartech.online",
+      "telephone": "+91-XXXXXXXXXX",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Main Road",
+        "addressLocality": "Karwar",
+        "addressRegion": "Karnataka",
+        "postalCode": "581301",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "14.8127",
+        "longitude": "74.1299"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "10:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "20:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Products and Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Mobile Phones",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "New Smartphones"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Used Smartphones"}}
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Laptops",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "New Laptops"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Used Laptops"}}
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Repair Services",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile Repair"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laptop Repair"}}
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- Structured Data - WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Karwar Tech",
+      "url": "https://karwartech.online",
+      "description": "Best mobile and laptop shop in Karwar",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://karwartech.online/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://karwartech.online"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://karwartech.online/products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Services",
+          "item": "https://karwartech.online/services"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center;">
+        <h1>Karwar Tech - Mobile & Laptop Shop</h1>
+        <p>You need to enable JavaScript to run this app.</p>
+        <p>Visit us at Karwar for the best deals on mobiles, laptops, and repair services.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

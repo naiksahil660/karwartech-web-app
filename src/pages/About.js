@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaMobileAlt, FaLaptop, FaTools, FaShippingFast, FaHeadset, FaShieldAlt } from 'react-icons/fa';
+import SEO from '../components/common/SEO';
 import './About.css';
 
 const About = () => {
@@ -38,6 +39,12 @@ const About = () => {
 
   return (
     <div className="about-page">
+      <SEO
+        title="About Us - Karwar Tech"
+        description="Learn about Karwar Tech - your trusted technology partner in Karwar. Founded by Anshul Naik, we offer quality mobiles, laptops, and expert repair services with years of experience."
+        keywords="about Karwar Tech, Anshul Naik Karwar, mobile shop owner Karwar, electronics store Karwar, technology partner Karnataka"
+        url="/about"
+      />
       <div className="container">
         {/* Hero Section */}
         <div className="about-hero">

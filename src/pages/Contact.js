@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
 import Button from '../components/common/Button';
+import SEO from '../components/common/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -50,6 +51,12 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <SEO
+        title="Contact Us - Karwar Tech"
+        description="Contact Karwar Tech for mobile phones, laptops, and repair services in Karwar. Visit our store or call us. Location: Main Road, Karwar, Karnataka 581301."
+        keywords="contact Karwar Tech, mobile shop contact Karwar, laptop shop phone number Karwar, electronics store Karwar location"
+        url="/contact"
+      />
       <div className="container">
         {/* Hero Section */}
         <div className="contact-hero">

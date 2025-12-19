@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { productAPI } from '../utils/api';
 import ProductCard from '../components/common/ProductCard';
 import Loading from '../components/common/Loading';
+import SEO from '../components/common/SEO';
 import { getCategoryDisplayName } from '../utils/helpers';
 import './Products.css';
 
@@ -103,12 +104,33 @@ const Products = () => {
     return 'All Products';
   };
 
+  const getSEODescription = () => {
+    if (filters.category) {
+      return `Shop ${getCategoryDisplayName(filters.category)} at Karwar Tech. Best prices on new and used mobiles, laptops, desktops and accessories in Karwar, Karnataka.`;
+    }
+    return 'Browse our wide selection of mobile phones, laptops, desktops, and accessories at Karwar Tech. Best prices in Karwar with expert support.';
+  };
+
+  const getSEOKeywords = () => {
+    const baseKeywords = 'buy mobile Karwar, buy laptop Karwar, electronics shop Karwar';
+    if (filters.category) {
+      return `${getCategoryDisplayName(filters.category)}, ${baseKeywords}`;
+    }
+    return baseKeywords;
+  };
+
   if (loading) {
     return <Loading fullScreen />;
   }
 
   return (
     <div className="products-page">
+      <SEO
+        title={`${getPageTitle()} - Buy Mobiles, Laptops & Accessories`}
+        description={getSEODescription()}
+        keywords={getSEOKeywords()}
+        url={`/products${filters.category ? `?category=${filters.category}` : ''}`}
+      />
       <div className="container">
         <div className="products-header">
           <h1 className="products-title">{getPageTitle()}</h1>

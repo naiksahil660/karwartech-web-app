@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import Input from '../components/common/Input';
 import Button from '../components/common/Button';
+import SEO from '../components/common/SEO';
 import './Auth.css';
 
 const Login = () => {
@@ -33,6 +34,11 @@ const Login = () => {
 
   return (
     <div className="auth-page">
+      <SEO
+        title="Login - Karwar Tech"
+        description="Login to your Karwar Tech account to access your orders, wishlist, and more."
+        url="/login"
+      />
       <div className="auth-container">
         <h1 className="auth-title">Login</h1>
         <form onSubmit={handleSubmit} className="auth-form">

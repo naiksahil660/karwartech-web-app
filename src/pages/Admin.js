@@ -25,7 +25,8 @@ const Admin = () => {
     category: 'new-phone',
     specifications: {},
     featured: false,
-    topItem: false
+    topItem: false,
+    stock: '1'
   });
   const [mainImage, setMainImage] = useState(null);
   const [otherImages, setOtherImages] = useState([]);
@@ -143,7 +144,8 @@ const Admin = () => {
       category: 'new-phone',
       specifications: {},
       featured: false,
-      topItem: false
+      topItem: false,
+      stock: '1'
     });
     setMainImage(null);
     setOtherImages([]);
@@ -180,6 +182,7 @@ const Admin = () => {
       submitData.append('specifications', JSON.stringify(formData.specifications));
       submitData.append('featured', formData.featured);
       submitData.append('topItem', formData.topItem);
+      submitData.append('stock', formData.stock || '1');
       submitData.append('mainImage', mainImage);
 
       otherImages.forEach(image => {
@@ -354,20 +357,35 @@ const Admin = () => {
               </div>
             </div>
 
-            <div className="form-group">
-              <label>Category *</label>
-              <select
-                name="category"
-                value={formData.category}
-                onChange={handleInputChange}
-                required
-              >
-                {categories.map(cat => (
-                  <option key={cat.value} value={cat.value}>
-                    {cat.label}
-                  </option>
-                ))}
-              </select>
+            <div className="form-row">
+              <div className="form-group">
+                <label>Category *</label>
+                <select
+                  name="category"
+                  value={formData.category}
+                  onChange={handleInputChange}
+                  required
+                >
+                  {categories.map(cat => (
+                    <option key={cat.value} value={cat.value}>
+                      {cat.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="form-group">
+                <label>Stock Quantity *</label>
+                <input
+                  type="number"
+                  name="stock"
+                  value={formData.stock}
+                  onChange={handleInputChange}
+                  placeholder="Enter available quantity"
+                  min="0"
+                  required
+                />
+                <small className="stock-hint">Set to 0 if out of stock</small>
+              </div>
             </div>
 
             {/* Display Options */}
@@ -503,7 +521,7 @@ const Admin = () => {
                 <th>Brand</th>
                 <th>Category</th>
                 <th>Price</th>
-                <th>Discount</th>
+                <th>Stock</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -526,7 +544,11 @@ const Admin = () => {
                       <span className="original-price">₹{product.originalPrice}</span>
                     )}
                   </td>
-                  <td>{product.discount || 0}%</td>
+                  <td>
+                    <span className={`stock-badge ${product.stock === 0 ? 'out-of-stock' : product.stock <= 5 ? 'low-stock' : 'in-stock'}`}>
+                      {product.stock === 0 ? 'Out of Stock' : product.stock}
+                    </span>
+                  </td>
                   <td>
                     <div className="action-buttons">
                       <button

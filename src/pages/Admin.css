@@ -449,6 +449,37 @@
   padding: 40px !important;
 }
 
+/* Stock Badge */
+.stock-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stock-badge.in-stock {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.stock-badge.low-stock {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.stock-badge.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Stock hint text */
+.stock-hint {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .admin-container {

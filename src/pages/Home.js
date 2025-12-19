@@ -4,6 +4,7 @@ import { productAPI } from '../utils/api';
 import ProductCard from '../components/common/ProductCard';
 import Loading from '../components/common/Loading';
 import Button from '../components/common/Button';
+import SEO from '../components/common/SEO';
 import { FaMobileAlt, FaLaptop, FaDesktop, FaHeadphones, FaTools, FaTag, FaGift } from 'react-icons/fa';
 import './Home.css';
 
@@ -144,6 +145,12 @@ const Home = () => {
 
   return (
     <div className="home">
+      <SEO
+        title="Best Mobile & Laptop Shop in Karwar"
+        description="Karwar Tech is your trusted destination for new & used mobiles, laptops, desktops, and accessories in Karwar. Expert repair services with genuine parts. Best prices guaranteed!"
+        keywords="mobile shop Karwar, laptop shop Karwar, phone repair Karwar, laptop repair Karwar, buy mobile Karwar, Samsung phones Karwar, iPhone Karwar, used phones Karwar"
+        url="/"
+      />
       <section className="hero-section">
         <div className="hero-overlay"></div>
 

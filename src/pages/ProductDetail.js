@@ -9,6 +9,7 @@ import { formatPrice } from '../utils/helpers';
 import Loading from '../components/common/Loading';
 import Button from '../components/common/Button';
 import ProductCard from '../components/common/ProductCard';
+import SEO from '../components/common/SEO';
 import './ProductDetail.css';
 
 const ProductDetail = () => {
@@ -121,6 +122,26 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-page">
+      <SEO
+        title={`${product.name} - ${product.brand}`}
+        description={product.description || `Buy ${product.name} from ${product.brand} at Karwar Tech. Best prices in Karwar with warranty and genuine products.`}
+        keywords={`${product.name}, ${product.brand}, buy ${product.brand} Karwar, ${product.category} Karwar`}
+        image={productImages[0]}
+        url={`/product/${product._id}`}
+        type="product"
+        product={{
+          name: product.name,
+          description: product.description,
+          brand: product.brand,
+          images: productImages,
+          originalPrice: product.originalPrice,
+          discountedPrice: product.price,
+          stock: product.stock,
+          rating: product.rating,
+          reviewCount: product.reviewCount,
+          _id: product._id
+        }}
+      />
       <div className="container">
         <button className="back-button" onClick={() => navigate(-1)}>
           <FaArrowLeft /> Back

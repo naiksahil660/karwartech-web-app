@@ -3,6 +3,7 @@ import { FaMobileAlt, FaLaptop, FaPhone, FaEnvelope, FaMapMarkerAlt, FaTools, Fa
 import { useAuth } from '../context/AuthContext';
 import { appointmentAPI } from '../utils/api';
 import Button from '../components/common/Button';
+import SEO from '../components/common/SEO';
 import './Services.css';
 
 const Services = () => {
@@ -85,6 +86,12 @@ const Services = () => {
 
   return (
     <div className="services-page">
+      <SEO
+        title="Mobile & Laptop Repair Services in Karwar"
+        description="Expert mobile phone and laptop repair services at Karwar Tech. Screen replacement, battery change, SSD installation, RAM upgrade, OS migration. Genuine parts with warranty."
+        keywords="mobile repair Karwar, laptop repair Karwar, phone screen replacement Karwar, laptop SSD installation Karwar, battery replacement Karwar, phone service center Karwar"
+        url="/services"
+      />
       <div className="container">
         {/* Hero Section */}
         <div className="services-hero">
