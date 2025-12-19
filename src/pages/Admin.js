@@ -23,7 +23,9 @@ const Admin = () => {
     discountedPrice: '',
     discountPercentage: '',
     category: 'new-phone',
-    specifications: {}
+    specifications: {},
+    featured: false,
+    topItem: false
   });
   const [mainImage, setMainImage] = useState(null);
   const [otherImages, setOtherImages] = useState([]);
@@ -139,7 +141,9 @@ const Admin = () => {
       discountedPrice: '',
       discountPercentage: '',
       category: 'new-phone',
-      specifications: {}
+      specifications: {},
+      featured: false,
+      topItem: false
     });
     setMainImage(null);
     setOtherImages([]);
@@ -174,6 +178,8 @@ const Admin = () => {
       submitData.append('discountPercentage', formData.discountPercentage || '0');
       submitData.append('category', formData.category);
       submitData.append('specifications', JSON.stringify(formData.specifications));
+      submitData.append('featured', formData.featured);
+      submitData.append('topItem', formData.topItem);
       submitData.append('mainImage', mainImage);
 
       otherImages.forEach(image => {
@@ -362,6 +368,34 @@ const Admin = () => {
                   </option>
                 ))}
               </select>
+            </div>
+
+            {/* Display Options */}
+            <div className="form-row checkbox-row">
+              <div className="form-group checkbox-group">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="featured"
+                    checked={formData.featured}
+                    onChange={(e) => setFormData(prev => ({ ...prev, featured: e.target.checked }))}
+                  />
+                  <span>Featured Product</span>
+                </label>
+                <small>Show in Featured Products section on Home page</small>
+              </div>
+              <div className="form-group checkbox-group">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="topItem"
+                    checked={formData.topItem}
+                    onChange={(e) => setFormData(prev => ({ ...prev, topItem: e.target.checked }))}
+                  />
+                  <span>Top Item</span>
+                </label>
+                <small>Show in Top Items Today section on Home page</small>
+              </div>
             </div>
 
             {/* Main Image Upload */}

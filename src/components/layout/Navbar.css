@@ -289,16 +289,48 @@
   }
 
   .navbar-icons {
-    gap: 12px;
+    gap: 8px;
+  }
+
+  .icon-button {
+    padding: 6px;
+    font-size: 16px;
   }
 
   .mobile-menu-icon {
+    display: block;
+    padding: 8px;
+    margin-left: 8px;
+  }
+
+  /* Account dropdown fix for mobile */
+  .user-dropdown {
+    position: static;
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    top: auto;
+    right: 16px;
+    left: auto;
+    margin-top: 8px;
+    max-width: calc(100vw - 32px);
+    z-index: 1000;
+  }
+
+  .dropdown-menu-content {
+    min-width: 160px;
+    max-width: 200px;
+  }
+
+  /* Mobile menu styles */
+  .navbar-bottom {
     display: block;
   }
 
   .navbar-menu {
     position: fixed;
-    top: 73px;
+    top: 65px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -311,16 +343,23 @@
     transition: transform 0.3s ease;
     overflow-y: auto;
     z-index: 99;
+    display: flex;
+    visibility: hidden;
   }
 
   .navbar-menu.active {
     transform: translateX(0);
+    visibility: visible;
   }
 
   .nav-link {
     padding: 16px;
     border-bottom: 1px solid var(--border);
-    border-bottom: 1px solid transparent;
+    font-size: 16px;
+  }
+
+  .nav-link:last-of-type {
+    border-bottom: 1px solid var(--border);
   }
 
   .mobile-search {
@@ -349,12 +388,60 @@
     border-radius: 6px;
     cursor: pointer;
   }
+}
 
-  .navbar-bottom {
-    display: none;
+/* Extra small screens */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 10px 12px;
   }
 
-  .navbar-menu.active ~ .navbar-bottom {
-    display: block;
+  .logo-image {
+    height: 32px;
+  }
+
+  .navbar-icons {
+    gap: 4px;
+  }
+
+  .icon-button {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 8px;
+    padding: 1px 4px;
+    min-width: 14px;
+  }
+
+  .mobile-menu-icon {
+    font-size: 20px;
+    padding: 6px;
+    margin-left: 4px;
+  }
+
+  .dropdown-menu {
+    right: 8px;
+    max-width: calc(100vw - 16px);
+  }
+
+  .dropdown-menu-content {
+    min-width: 140px;
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .navbar-menu {
+    top: 55px;
+    padding: 12px;
+  }
+
+  .nav-link {
+    padding: 14px 12px;
+    font-size: 15px;
   }
 }

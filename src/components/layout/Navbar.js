@@ -38,6 +38,10 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Close dropdown when opening mobile menu
+    if (!isMobileMenuOpen) {
+      setIsDropdownOpen(false);
+    }
   };
 
   const closeMobileMenu = () => {
@@ -46,6 +50,10 @@ const Navbar = () => {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+    // Close mobile menu when opening dropdown
+    if (!isDropdownOpen) {
+      setIsMobileMenuOpen(false);
+    }
   };
 
   const closeDropdown = () => {

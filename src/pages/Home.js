@@ -10,6 +10,7 @@ import './Home.css';
 const Home = () => {
   const [topItems, setTopItems] = useState([]);
   const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [latestProducts, setLatestProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -87,13 +88,15 @@ const Home = () => {
       setLoading(true);
       setError(null);
 
-      const [topItemsRes, featuredRes] = await Promise.all([
+      const [topItemsRes, featuredRes, latestRes] = await Promise.all([
         productAPI.getAllProducts({ topItem: 'true' }),
-        productAPI.getAllProducts({ featured: 'true' })
+        productAPI.getAllProducts({ featured: 'true' }),
+        productAPI.getAllProducts({ sort: 'newest' })
       ]);
 
       setTopItems(topItemsRes.data.products);
       setFeaturedProducts(featuredRes.data.products);
+      setLatestProducts(latestRes.data.products);
     } catch (err) {
       setError('Failed to load products');
       console.error(err);
@@ -279,6 +282,24 @@ const Home = () => {
             </div>
             <div className="products-grid">
               {featuredProducts.slice(0, 8).map((product) => (
+                <ProductCard key={product._id} product={product} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {latestProducts.length > 0 && (
+        <section className="products-section latest-section">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">Latest Products</h2>
+              <Link to="/products">
+                <Button variant="outline">View All</Button>
+              </Link>
+            </div>
+            <div className="products-grid">
+              {latestProducts.slice(0, 8).map((product) => (
                 <ProductCard key={product._id} product={product} />
               ))}
             </div>
